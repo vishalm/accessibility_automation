@@ -9,7 +9,13 @@ let service   = new chrome.ServiceBuilder(path).build();
 chrome.setDefaultService(service);
 
 let buildChromeDriver = async function () { // eslint-disable-line
-	return await new webdriver.Builder().withCapabilities(webdriver.Capabilities.chrome({})).build();
+	var chromeCapabilities = webdriver.Capabilities.chrome();
+	//setting chrome options to start the browser fully maximized
+	var chromeOptions = {
+		'args': ['--test-type', '--start-maximized','--headless','--disable-gpu']
+	};
+	chromeCapabilities.set('chromeOptions', chromeOptions);
+	return await new webdriver.Builder().withCapabilities(chromeCapabilities).build();
 };
 
 let driver = buildChromeDriver();

@@ -61,3 +61,5 @@ typings/
 .next
 axe-example/package-lock.json
 package-lock.json
+# axe-example/reports/*
+

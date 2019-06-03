@@ -1,8 +1,10 @@
 language: node_js
+addons:
+  chrome: stable
 jobs:
   include:
     - stage: "axe accessibility test"
-      script: echo test
-    - # stage name not required, will continue to use `test`
-    - stage: "axe accessibility test reports"
+      script: sh /axe-example/travis_ci.sh
+      script: 
+    - stage: "pa11y accessibility test reports"
       script: echo report
