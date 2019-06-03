@@ -1,7 +1,7 @@
 
 # Accessibility Automation
 
-[![Travis](https://travis-ci.org/vishalm/accessibility_automation.svg?branch=master)](https://travis-ci.org/vishalm/accessibility_automation)
+[![Travis](https://travis-ci.org/vishalm/accessibility_automation.svg)](https://travis-ci.org/vishalm/accessibility_automation)
 
 Helping communities by providing very simple example for accessibility test automation.
 
