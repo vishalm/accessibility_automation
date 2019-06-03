@@ -1,0 +1,8 @@
+language: node_js
+jobs:
+  include:
+    - stage: "axe accessibility test"
+      script: echo test
+    - # stage name not required, will continue to use `test`
+    - stage: "axe accessibility test reports"
+      script: echo report
