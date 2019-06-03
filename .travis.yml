@@ -4,7 +4,7 @@ addons:
 jobs:
   include:
     - stage: "axe accessibility test"
-      script: sh /axe-example/travis_ci.sh
+      script: sh ./axe-example/travis_ci.sh
       script: 
     - stage: "pa11y accessibility test reports"
       script: echo report
