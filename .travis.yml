@@ -1,15 +1,11 @@
 language: node_js
 node_js:
   - "10"
-before_script:
-    - curl -L "http://downloads.sourceforge.net/shunit2/shunit2-2.0.3.tgz" | tar z
 addons:
   chrome: stable
 jobs:
   include:
     - stage: "axe accessibility test"
-      script: cd axe-example
-      install: npm install
-      script: npm run test
+      script: cd axe-example && npm install && npm run test
     - stage: "pa11y accessibility test reports"
       script: echo report
