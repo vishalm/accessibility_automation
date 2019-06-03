@@ -1,0 +1,36 @@
+{
+  "scripts": {
+    "test": "jest"
+  },
+  "dependencies": {
+    "babel-preset-env": "^1.7.0",
+    "cross-env": "^5.2.0",
+    "jest": "^24.8.0",
+    "selenium-standalone": "^6.15.2",
+    "axe-core": "^2.6.1",
+    "axe-reports": "^1.1.11",
+    "axe-webdriverjs": "^2.2.0",
+    "jest-html-reporters": "^1.1.5",
+    "chromedriver": "2.41.0",
+    "chai": "4.1.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.2.3",
+    "@babel/register": "^7.4.4",
+    "chai-as-promised": "^7.1.1"
+  },
+  "babel": {
+    "presets": [
+      [
+        "@babel/preset-env",
+        {
+          "targets": {
+            "node": "current"
+          }
+        }
+      ]
+    ]
+  }
+}
