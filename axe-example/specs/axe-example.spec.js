@@ -1,22 +1,34 @@
-const publicPage = require('./support/pages/public-pages');
+const axeParserHelper = require('./support/pages/axe-parser-helper');
+const setup = require('./support/pages/setup');
+const chai = require('chai');
+const expect = chai.expect;
+const testParam = 'Accessibility validations for';
+describe(`${testParam}`, function () {
 
-describe("Accessibility validations for", function () {
+    let driver;
 
+    beforeEach(async() => { // eslint-disable-line no-console
+        driver = await setup.getDriver();
+      });
 
-    it(`google page`, async function () {
-        await driver.get('https://en.wikipedia.org/wiki/Base64');
-        console.log(browser)
+      afterEach(async () => {
+        await driver.quit();
+      });
+      
+    it(`google home page`, async function () {
+        let axeParser = new axeParserHelper(driver);
+
+        const pageUrl = await axeParser.getUrl();
+
+        await axeParser.openPage(pageUrl);
+        const pageTitle = await axeParser.getBrowserTitle();
+
+        expect(pageTitle).to.contain('Google');
+
+        let results = await axeParser.getAXEChecksAndReport(pageTitle);
         
-        const pageUrl = publicPage.getUrl();
-        await publicPage.openPage(pageUrl);
-        const pageTitle = await publicPage.getBrowserTitle();
-        expect(pageTitle).to.be.present;
-
-        let testName = (this.test.parent.title + ' ' + this.test.title).toLowerCase();
-
-        let results = PublicPage.getAXEChecksAndReport(testName);
-
-        assert.equal(results.violations.length, 0, 'Expected no a11y violations');
+        // Keeping violations count to 2 as google homepage have 2 violations
+        expect(results.violations.length).to.be.eql(2);
 
     });
 

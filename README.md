@@ -42,6 +42,19 @@ Helping communities by providing very simple example for accessibility test auto
   
   * axe <https://www.deque.com/axe/>
   * The axe team maintains active channels on Gitter and the A11y workspace on Slack.
+  * In folder `axe-example`
+  
+    To execute
+    ```js
+      cd axe-example
+      npm install
+      npm run test
+    ```
+  * Reports
+    * in reports folder
+    * jest test execution
+    * Accessibility violation csv
+
 
 ## Reports
 
