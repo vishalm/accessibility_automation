@@ -2,9 +2,9 @@
 ## Tech stack
 * jest
 * selenium-webdriver
-* accessibility engine axe
+* accessibility engine continuum from APM https://www.webaccessibility.com/ Web Accessibility by Level Access
 
-* Google homepage accessibility result using axe
+* Twitter homepage accessibility result using axe
 ```js
 [ { description:
          'Ensures the contrast between foreground and background colors meets WCAG 2 AA contrast ratio thresholds',
@@ -30,5 +30,5 @@
 ```
 
 ## Detail reports are in report folder
-* test execution html : axe-test-report.html
+* test execution html :  continuum-test-report.html
 * Accessibility voilation assessment : axe-test-report.html

@@ -16,8 +16,8 @@ export default class AxeParserHelper {
         await this.driver.get(pageUrl);
     }
 
-    async getUrl() {
-        const url = await publicUrl['publicUrl']['google'];
+    async getUrl(page) {
+        const url = await publicUrl['publicUrl'][page];
         return url;
     }
 
