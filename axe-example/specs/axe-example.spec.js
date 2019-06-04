@@ -2,34 +2,38 @@ const axeParserHelper = require('./support/pages/axe-parser-helper');
 const setup = require('./support/pages/setup');
 const chai = require('chai');
 const expect = chai.expect;
-const testParam = 'Accessibility validations for';
+const testParam = 'Accessibility validations using axe for';
+const testFor = 'twitter'
 describe(`${testParam}`, function () {
 
-    let driver;
+  let driver;
 
-    beforeEach(async() => { // eslint-disable-line no-console
-        driver = await setup.getDriver();
-      });
+  beforeEach(async () => { // eslint-disable-line no-console
+    jest.setTimeout(30000);
+    driver = await setup.getDriver();
+  });
 
-      afterEach(async () => {
-        await driver.quit();
-      });
-      
-    it(`google home page`, async function () {
-        let axeParser = new axeParserHelper(driver);
+  afterEach(async () => {
+    await driver.quit();
+  });
 
-        const pageUrl = await axeParser.getUrl();
+  it(`${testFor} home page`, async function () {
+    let axeParser = new axeParserHelper(driver);
 
-        await axeParser.openPage(pageUrl);
-        const pageTitle = await axeParser.getBrowserTitle();
+    const pageUrl = await axeParser.getUrl(testFor);
 
-        expect(pageTitle).to.contain('Google');
+    await axeParser.openPage(pageUrl);
+    const pageTitle = await axeParser.getBrowserTitle();
 
-        let results = await axeParser.getAXEChecksAndReport(pageTitle);
-        
-        // Keeping violations count to 2 as google homepage have 2 violations
-        expect(results.violations.length).not.to.be.eql(0);
+    expect(pageTitle.toLowerCase()).to.contain(testFor);
 
-    });
+    let results = await axeParser.getAXEChecksAndReport(testFor);
+
+    // Keeping violations count to 2 as google homepage have 2 violations
+    console.log(results.violations.length);
+
+    expect(results.violations.length).to.be.equal(2);
+
+  });
 
 });

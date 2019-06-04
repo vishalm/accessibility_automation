@@ -7,5 +7,5 @@ jobs:
   include:
     - stage: "axe accessibility test"
       script: cd axe-example && npm install && npm run test
-    - stage: "pa11y accessibility test reports"
-      script: echo report
+    - stage: "continuum accessibility test reports"
+      script: cd continuum-example && npm install && npm run test
