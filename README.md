@@ -9,6 +9,8 @@
 # Accessibility Testing Automation
 `Disclamer:
 This my personal research I am not representing any organisation or my employer**`
+Accessibility
+These checks highlight opportunities to improve the accessibility of your web app. Only a subset of accessibility issues can be automatically detected so manual testing is also encouraged.
 
 Helping communities by providing very simple example for accessibility test automation.
 
@@ -67,7 +69,7 @@ Helping communities by providing very simple example for accessibility test auto
 
 * #### Continuum: Accessibility for Development Teams Start building accessibility into your dev process today
   
-  * continuum accessibility engine continuum from APM https://www.webaccessibility.com/ Web Accessibility by Level 
+  * continuum accessibility engine continuum from AMP https://www.webaccessibility.com/ Web Accessibility by Level 
   * In folder `continuum-example`
   
     To execute
