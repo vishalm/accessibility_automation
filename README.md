@@ -9,8 +9,8 @@
 # Accessibility Testing Automation
 `Disclamer:
 This my personal research I am not representing any organisation or my employer**`
-Accessibility
-These checks highlight opportunities to improve the accessibility of your web app. Only a subset of accessibility issues can be automatically detected so manual testing is also encouraged.
+
+* Accessibility automated testing checks highlight opportunities to improve the accessibility of your web app. Only a subset of accessibility issues can be automatically detected so manual testing is also encouraged.
 
 Helping communities by providing very simple example for accessibility test automation.
 
