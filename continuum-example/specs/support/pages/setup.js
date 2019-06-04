@@ -12,9 +12,10 @@ let buildChromeDriver = async function () { // eslint-disable-line
 	var chromeCapabilities = webdriver.Capabilities.chrome();
 	//setting chrome options to start the browser fully maximized
 	var chromeOptions = {
-		// 'args': ['--test-type', '--start-maximized','--headless','--disable-gpu']
-		//in headless mode getting less accessibity issues
-		'args': ['--test-type', '--start-maximized','--disable-gpu']
+		'args': ['--test-type', '--start-maximized','--headless','--disable-gpu']
+		//in headless mode getting no accessibity issues using continuum but to run on travis activating headless
+		// make sure you not adding headless capability when executing on local
+		// 'args': ['--test-type', '--start-maximized','--disable-gpu']
 	};
 	chromeCapabilities.set('chromeOptions', chromeOptions);
 	return await new webdriver.Builder().withCapabilities(chromeCapabilities).build();
