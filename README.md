@@ -112,7 +112,7 @@ Helping communities by providing very simple example for accessibility test auto
 |  Accessibility problems found 	| google  	|  twitter 	|   	|   	|
 |---	|---	|---	|---	|---	|
 |  axe 	|  2 	|   2	|   	|   	|
-|  continuum 	|  0 	|  2	|   	|   	|
+|  continuum 	|  2 	|  2	|   	|   	|
 |  pa11y 	|   3	|  52 	|   	|   	|
 
 ## Which example to choose.
