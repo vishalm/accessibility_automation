@@ -41,8 +41,9 @@ export default class ContinuumParserHelper {
             for (var i = 0; i < results.length; i++) {
                 var temp = [];
                 //Depends upon the standards on can filter the reports.
-                if (JSON.stringify(results[i]._bestPracticeStandards).search('WCAG 2.1')) {
-                    if (!(JSON.stringify(results[i]._bestPracticeStandards).search('AAA') >= 0)) {
+                // Removing standard filters for correct comparison among the tools
+                // if (JSON.stringify(results[i]._bestPracticeStandards).search('WCAG 2.1')) {
+                //     if (!(JSON.stringify(results[i]._bestPracticeStandards).search('AAA') >= 0)) {
                         temp.push(results[i]._path.toString());
                         temp.push(results[i]._element.toString());
                         temp.push(results[i]._attribute.toString());
@@ -50,9 +51,7 @@ export default class ContinuumParserHelper {
                         temp.push(JSON.stringify(results[i]._bestPracticeStandards));
                         temp.push('**  ');
                         finalResultArray.push(temp);
-                    }
-
-                }
+                    // }}
             }
 
             const {
