@@ -29,7 +29,6 @@ module.exports = {
     "proxyOptions": {
       "https": "http://127.0.0.1:3218"
     }
-  },
-  bail: 0
+  }
 
 };

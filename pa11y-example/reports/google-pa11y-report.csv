@@ -1,0 +1,4 @@
+code,context,message,type,selector,Notes-Comments
+"WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Center","<center><br clear=""all"" id=""lgpd""><div ...</center>","Presentational markup used that has become obsolete in HTML5.",error,"html > body > center","**  "
+"WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.AlignAttr","<td align=""center"" nowrap=""""><input name=""ie"" value=""ISO-885...</td>","Align attributes .",error,"html > body > center > form > table > tbody > tr > td:nth-child(2)","**  "
+"WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.AlignAttr","<td class=""fl sblc"" align=""right"" nowrap="""" width=""25%""><a href=""/advanced_search?hl=ar...</td>","Align attributes .",error,"html > body > center > form > table > tbody > tr > td:nth-child(3)","**  "

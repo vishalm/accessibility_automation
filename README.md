@@ -81,18 +81,37 @@ Helping communities by providing very simple example for accessibility test auto
     * jest test execution
     * Accessibility violation csv
 
+* #### Pa11y: [Pa11y is your automated accessibility testing pal](http://pa11y.org/)
+  
+  * accessibility engine pa11y [Pa11y Github for more action](https://github.com/pa11y/pa11y)
+  * In folder `pa11y-example`
+  
+    To execute
+    ```js
+      cd pa11y-example
+      npm install
+      npm run test
+    ```
+  * Reports
+    * in reports folder
+    * jest test execution
+    * Accessibility violation csv
+    * intrestingly for twitter got 52 violations 
+
 
 ## Reports
 
 * Default test framework report for jest execution to support CI
 * But the important part getting the report of accessibility concerns and all the examples have associated ways to create       CSV reports.
 
-  ### Quick comparision of test sample the count of accessbility found
-  |  Accessibility problems found 	| google  	|  twitter 	|   	|   	|
-  |---	|---	|---	|---	|---	|
-  |  axe 	|  2 	|   2	|   	|   	|
-  |  continuum 	|  0 	|  2	|   	|   	|
-  |   	|   	|   	|   	|   	|
+### Quick comparision of test sample the count of accessbility found
+  * **Number of violation is not equal to the quality of voilations**
+  
+|  Accessibility problems found 	| google  	|  twitter 	|   	|   	|
+|---	|---	|---	|---	|---	|
+|  axe 	|  2 	|   2	|   	|   	|
+|  continuum 	|  0 	|  2	|   	|   	|
+|  pa11y 	|   3	|  52 	|   	|   	|
 
 ## Which example to choose.
 
