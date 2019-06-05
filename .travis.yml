@@ -5,7 +5,9 @@ addons:
   chrome: stable
 jobs:
   include:
-    - stage: "axe continuum pa11y accessibility test"
+    - stage: "axe accessibility test"
       script: cd axe-example && npm install && npm run test
+    - stage: "continuum accessibility test reports"
       script: cd continuum-example && npm install && npm run test
+    - stage: "pa11y accessibility test reports"
       script: cd pa11y-example && npm install && npm run test
