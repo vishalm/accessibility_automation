@@ -15,4 +15,3 @@ steps:
     npm install
     npm run build
     npm run test
-    displayName: 'Test'
