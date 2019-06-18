@@ -4,9 +4,11 @@
 <br />
 </p>
 
+[![Azure Pipeline Build Status](https://dev.azure.com/vishalmishra84/Test%20Project/_apis/build/status/vishalm.accessibility_automation?branchName=master)](https://dev.azure.com/vishalmishra84/Test%20Project/_build/latest?definitionId=1&branchName=master)
+
+
 [![Travis](https://travis-ci.org/vishalm/accessibility_automation.svg)](https://travis-ci.org/vishalm/accessibility_automation)
 
-[![Azure Pipeline Build Status](https://dev.azure.com/vishalmishra84/Test%20Project/_apis/build/status/vishalm.accessibility_automation?branchName=master)](https://dev.azure.com/vishalmishra84/Test%20Project/_build/latest?definitionId=1&branchName=master)
 
 
 # Accessibility Testing Automation
