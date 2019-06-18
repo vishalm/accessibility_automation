@@ -15,3 +15,20 @@ steps:
     npm install
     npm run build
     npm run test
+  displayName: 'Accessibility tests using continuum level access'
+
+- script: |
+    cd.. 
+    cd axe-example
+    npm install
+    npm run build
+    npm run test
+  displayName: 'Accessibility tests using axe deque'
+
+- script: |
+    cd.. 
+    cd pa11y-example
+    npm install
+    npm run build
+    npm run test
+  displayName: 'Accessibility tests using pa11y'
