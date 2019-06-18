@@ -1,0 +1,13 @@
+pool:
+  vmImage: 'ubuntu-16.04'
+strategy:
+  matrix:
+    node_8_x:
+      node_version: 8.0
+
+steps:
+- task: NodeTool@0 
+  inputs:
+    versionSpec: $(node_version)
+
+- script: cd continuum-example && npm install && npm run test
