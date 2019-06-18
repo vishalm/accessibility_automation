@@ -1,13 +1,18 @@
+trigger:
+- master
+
 pool:
-  vmImage: 'ubuntu-16.04'
-strategy:
-  matrix:
-    node_8_x:
-      node_version: 8.0
+  vmImage: 'ubuntu-latest'
 
 steps:
-- task: NodeTool@0 
+- task: NodeTool@0
   inputs:
-    versionSpec: $(node_version)
+    versionSpec: '10.x'
+  displayName: 'Install Node.js'
 
-- script: cd continuum-example && npm install && npm run test
+- script: |
+    cd continuum-example
+    npm install
+    npm run build
+    npm run test
+    displayName: 'Test'
